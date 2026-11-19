@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "china-uscc-validator"
+version = "1.0.0"
+description = "Zero-dependency GB 32100-2015 / ISO 7064 MOD 31-3 validator and jurisdiction decoder for China's 18-digit Unified Social Credit Code (USCC)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [
+  { name = "Transfong Ventures Pte. Ltd.", email = "reports@chinaentitycheck.com" }
+]
+keywords = ["china", "uscc", "gb32100", "samr", "kyb", "due-diligence", "validator"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://chinaentitycheck.com/tools/uscc-checker/"
+Documentation = "https://chinaentitycheck.com/guides/china-company-registration-search-samr-gsxt-guide/"
+Repository = "https://github.com/transfongtech/china-uscc-validator"
+"Live Verification" = "https://chinaentitycheck.com/?utm_source=pypi&utm_medium=oss&utm_campaign=china_uscc_validator"
+
+[project.scripts]
+uscc-validate = "china_uscc_validator.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["python"]

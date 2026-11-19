@@ -1,0 +1,45 @@
+{
+  "name": "china-uscc-validator",
+  "version": "1.0.0",
+  "description": "Zero-dependency GB 32100-2015 / ISO 7064 MOD 31-3 validator and jurisdiction decoder for China's 18-digit Unified Social Credit Code (USCC).",
+  "license": "MIT",
+  "homepage": "https://chinaentitycheck.com/tools/uscc-checker/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transfongtech/china-uscc-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/transfongtech/china-uscc-validator/issues"
+  },
+  "keywords": [
+    "china",
+    "uscc",
+    "gb32100",
+    "samr",
+    "kyb",
+    "due-diligence",
+    "compliance",
+    "validator"
+  ],
+  "main": "./js/index.cjs",
+  "module": "./js/index.mjs",
+  "types": "./js/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./js/index.mjs",
+      "require": "./js/index.cjs",
+      "types": "./js/index.d.ts"
+    }
+  },
+  "files": [
+    "js/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/test_uscc.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
